@@ -1,0 +1,73 @@
+#!/usr/bin/env python
+import os
+os.system("apt-get install figlet")
+os.system("clear")
+os.system("figlet NMAP PORT  TARAMA")
+
+print("""
+rabbitcyber'e hoşgeldiniz:)
+
+1) HIZLI TARAMA
+2) SERVİS VE VERSİYON BİLİGİSİ
+3) İŞLETİM SİSTEMİ BİLİGİSİ
+4) SADECE AÇIK PORTLAR
+5) GÜVENLİK DUVARI HAKKINDA BİLGİ ALMA
+6) BAĞLANTI HİZMET VE SÜRÜM BİLİGİSİ TESPİT
+7) TÜM TCP PORTLARINI TARAMA
+8) TÜM UDP PORTLARINI TARAMA
+9) PAKET VEYA FİREWALL ALGILAMA
+10) AGRESİF TARAMA OPSİYONUNU AKTİFLEŞTİRME
+11) DNS CÖZÜMLEMESİ YAPMA 
+""")
+islemno = input("ISLEM NUMARASI GİRİN: ")
+
+if(islemno=="1"):
+    hedefip = input("HEDEF IP GİRİRN")
+    os.system("nmap" + hedefip)
+
+elif(islemno=="2"):
+    hedefip = input("HEDEF IP GİRİRN")
+    os.system("nmap -sS -sV" + hedefip)
+
+elif(islemno=="3"):
+    hedefip = input("HEDEF IP GİRİRN")
+    os.system("nmap -o" + hedefip)
+
+elif(islemno=="4"):
+    hedefip = input("HEDEF IP GİRİRN")
+    os.system("nmap -open" + hedefip)
+
+
+elif(islemno=="5"):
+    hedefip = input("HEDEF IP GİRİRN")
+    os.system("nmap -v -sA" + hedefip)
+
+
+elif(islemno=="6"):
+    hedefip = input("HEDEF IP GİRİRN")
+    os.system("nmap -sV /24 " + hedefip)
+
+elif(islemno=="7"):
+    hedefip = input("HEDEF IP GİRİRN")
+    os.system("nmap -sT" + hedefip)
+
+elif(islemno=="8"):
+    hedefip = input("HEDEF IP GİRİRN")
+    os.system("nmap -sU" + hedefip)
+
+elif(islemno=="9"):
+    hedefip = input("HEDEF IP GİRİRN")
+    os.system("nmap -sA" + hedefip)
+
+elif(islemno=="10"):
+    hedefip = input("HEDEF IP GİRİRN")
+    os.system("nmap -A" + hedefip)
+
+elif(islemno=="11"):  
+    hedefip = input("HEDEF IP GİRİRN")
+    os.system("nmap -n" + hedefip)
+
+else:
+    print("pc öğren önce hatalı seçim")
+
+
