@@ -7,3 +7,7 @@ setup:
 $git clone https://github.com/enqss/nmap-rabbittcyber.git
 $ls
 $python nmap.py
+
+MEDİUM
+https://medium.com/@enes_mercan
+It's written as sugary nmap on medium
